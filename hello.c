@@ -3,13 +3,13 @@
 MODULE_LICENSE("GPL");
 MODULE_AUTHOR("madj");
 
-static int hello_init(void)
+static int __init hello_init(void)
 {
 	pr_debug("Hello, world\n");
 	return 0;
 }
 
-static void hello_exit(void)
+static void __exit hello_exit(void)
 {
 	pr_debug("Goodbye, cruel world\n");
 }
