@@ -20,7 +20,7 @@ static void __exit hello_exit(void)
 
 	jiffies_after = get_jiffies_64();
 	diff = jiffies_to_msecs(jiffies_after-jiffies_before);
-	pr_debug("Goodbye, cruel world: %lu\n", diff/1000);
+	pr_debug("Goodbye, cruel world: %lu\n", diff/HZ);
 }
 
 module_init(hello_init);
